@@ -2,78 +2,91 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const peopleSchema = new Schema({
+const starshipSchema = new Schema ({
     name: {
         type: String,
         required: true,
         unique: true,
         trim: true,
-        minlength: 2
     },
-    height: {
+    model: {
         type: String,
         required: true,
         trim: true,
     },
-    mass: {
+    starship_class: {
         type: String,
         required: true,
         trim: true,
     },
-    hair_color: {
+    manufacturer: {
         type: String,
         required: true,
         trim: true,
     },
-    skin_color: {
+    cost_in_credits: {
         type: String,
         required: true,
         trim: true,
     },
-    eye_color: {
+    length: {
         type: String,
         required: true,
         trim: true,
     },
-    birth_year: {
+    crew: {
         type: String,
         required: true,
         trim: true,
     },
-    gender: {
+    passengers: {
         type: String,
         required: true,
         trim: true,
     },
-    homeworld: {
+    max_astmosphering_speed: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    hyperdrive_rating: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    MGLT: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    cargo_capacity: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    consumables: {
         type: String,
         required: true,
         trim: true,
     },
     films: [{
-        type: String
-    }],
-    species: [{
-        type: String
-    }],
-    vehicles: [{
-        type: String
-    }],
-    starships: [{
         type: String,
         trim: true,
-        minlength: 5
+    }],
+    pilots: [{
+        type: String,
+        trim: true,
     }],
     created: {
         type: Date,
         required: true,
     },
-    editied: {
+    edited: {
         type: Date,
-        required: true
-    },
+        required: true,
+    }
 })
 
-const person = mongoose.model('person', peopleSchema)
+const starship = mongoose.model('starship', starshipSchema)
 
-module.exports = person
+module.exports = starship

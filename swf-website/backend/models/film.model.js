@@ -61,8 +61,6 @@ const filmsSchema = new Schema ({
         type: Date,
         required: true,
     }
-}, {
-    timestamps: true
 })
 
 const film = mongoose.model('film', filmsSchema)

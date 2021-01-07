@@ -2,45 +2,49 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const peopleSchema = new Schema({
+const speciesSchema = new Schema ({
     name: {
         type: String,
         required: true,
         unique: true,
         trim: true,
-        minlength: 2
     },
-    height: {
+    classification: {
         type: String,
         required: true,
         trim: true,
     },
-    mass: {
+    designation: {
         type: String,
         required: true,
         trim: true,
     },
-    hair_color: {
+    average_height: {
         type: String,
         required: true,
         trim: true,
     },
-    skin_color: {
+    average_lifespan: {
         type: String,
         required: true,
         trim: true,
     },
-    eye_color: {
+    eye_colors: {
         type: String,
         required: true,
         trim: true,
     },
-    birth_year: {
+    hair_colors: {
         type: String,
         required: true,
         trim: true,
     },
-    gender: {
+    skin_colors: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    language: {
         type: String,
         required: true,
         trim: true,
@@ -50,30 +54,24 @@ const peopleSchema = new Schema({
         required: true,
         trim: true,
     },
-    films: [{
-        type: String
-    }],
-    species: [{
-        type: String
-    }],
-    vehicles: [{
-        type: String
-    }],
-    starships: [{
+    people: [{
         type: String,
         trim: true,
-        minlength: 5
+    }],
+    films: [{
+        type: String,
+        trim: true,
     }],
     created: {
         type: Date,
         required: true,
     },
-    editied: {
+    edited: {
         type: Date,
-        required: true
-    },
+        required: true,
+    }
 })
 
-const person = mongoose.model('person', peopleSchema)
+const species = mongoose.model('species', speciesSchema)
 
-module.exports = person
+module.exports = species
