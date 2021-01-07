@@ -23,6 +23,22 @@ connection.once('open', () => {
     console.log('Connection to MongoDB Atlas Succesful')
 })
 
+const usersRouter = require('./routes/users')
+const filmsRouter = require('./routes/films')
+const peopleRouter = require('./routes/people')
+const planetsRouter = require('./routes/planets')
+const speciesRouter = require('./routes/species')
+const starshipsRouter = require('./routes/starships')
+const vehiclesRouter = require('./routes/vehicles')
+
+app.use('/users', usersRouter)
+app.use('/films', filmsRouter)
+app.use('/people', peopleRouter)
+app.use('/planets', planetsRouter)
+app.use('/species', speciesRouter)
+app.use('/starships', starshipsRouter)
+app.use('/vehicles', vehiclesRouter)
+
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`)
 })
