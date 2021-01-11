@@ -55,3 +55,23 @@ function sendVerificationEmail(user) {
     })
 }
 
+router.route('/login').post((req, res) => {
+
+})
+
+router.route('/signup').post((req, res) => {
+
+})
+
+router.route('/update/:id').put((req, res) => {
+
+})
+
+router.route('/verify/:verificationKey').get((req, res) => {
+
+})
+
+router.route('/delete/:id').delete((req, res) => {
+    
+})
+
