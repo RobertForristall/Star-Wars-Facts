@@ -7,10 +7,34 @@ export default class Navbar extends React.Component {
     constructor(props){
         super(props)
 
+        this.filmsClick = this.filmsClick.bind(this)
 
+        this.state = {
+            filmsToggle: false
+        }
+    }
+
+    filmsClick(e) {
+
+        e.preventDefault();
+        console.log('button pressed')
+
+        this.setState(state => ({
+            filmsToggle: !state.filmsToggle
+        }))
     }
 
     render() {
+
+        let filmsList
+
+        if (this.state.filmsToggle) filmsList = <div className = 'dropdown-container'>
+                                        <Link to = '#'>The Phantom Menace</Link>
+                                        <Link to = '#'>Attack of the Clones</Link>
+                                        <Link to = '#'>Revenge of the Sith</Link>
+                                    </div>
+                                        
+
         return(
             <div className = 'sidenav'>
                 <div className = 'MainImage'>
@@ -38,14 +62,10 @@ export default class Navbar extends React.Component {
                     </li>
                 </ul>
 
-                <button className='dropdown-btn'>Films
+                <button className='dropdown-btn' onClick = {this.filmsClick}>Films
                     <i className = 'fa fa-caret-down'/>
                 </button>
-                <div className = 'dropdown-container'>
-                    <Link to = '#'>The Phantom Menace</Link>
-                    <Link to = '#'>Attack of the Clones</Link>
-                    <Link to = '#'>Revenge of the Sith</Link>
-                </div>
+                {filmsList}
 
                 
             </div>
