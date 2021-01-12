@@ -75,3 +75,5 @@ router.route('/delete/:id').delete((req, res) => {
     
 })
 
+module.exports = router
+

@@ -25,34 +25,16 @@ const filmsSchema = new Schema ({
         required: true,
         trim: true,
     },
-    producer: [{
-        type: String,
-        trim: true,
-    }],
+    producer: [String],
     release_date: {
         type: Date,
         required: true,
     },
-    characters: [{
-        type: String,
-        trim: true,
-    }],
-    planets: [{
-        type: String,
-        trim: true,
-    }],
-    starships: [{
-        type: String,
-        trim: true,
-    }],
-    vehicles: [{
-        type: String,
-        trim: true,
-    }],
-    species: [{
-        type: String,
-        trim: true,
-    }],
+    characters: [String],
+    planets: [String],
+    starships: [String],
+    vehicles: [String],
+    species: [String],
     created: {
         type: Date,
         required: true,

@@ -21,3 +21,5 @@ router.route('/planets/update/:id').put((req, res) => {
 router.route('/planets/delete/:id').delete((req, res) => {
     
 })
+
+module.exports = router

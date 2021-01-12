@@ -21,3 +21,5 @@ router.route('/starships/update/:id').put((req, res) => {
 router.route('/starships/delete/:id').delete((req, res) => {
     
 })
+
+module.exports = router

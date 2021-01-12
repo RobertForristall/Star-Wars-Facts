@@ -21,3 +21,5 @@ router.route('/vehicles/update/:id').put((req, res) => {
 router.route('/vehicles/delete/:id').delete((req, res) => {
     
 })
+
+module.exports = router
