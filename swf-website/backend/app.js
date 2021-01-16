@@ -2,6 +2,7 @@ const cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const db = require("./db_conn")
 
 require('dotenv').config()
 
@@ -13,15 +14,7 @@ app.use(cors())
 
 const port = process.env.PORT || 5000
 
-const uri = process.env.ATLAS_URI
-
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true})
-
-const connection = mongoose.connection
-
-connection.once('open', () => {
-    console.log('Connection to MongoDB Atlas Succesful')
-})
+const connection = db
 
 const usersRouter = require('./routes/users')
 const filmsRouter = require('./routes/films')
@@ -43,4 +36,4 @@ app.listen(port, () => {
     console.log(`Server is running on port: ${port}`)
 })
 
-module.exports = {app}
+module.exports = app
