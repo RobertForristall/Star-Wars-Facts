@@ -4,6 +4,21 @@ const app = require('../backend/app')
 //SWAPI Tests
 //======================================
 
+describe('GET /swapi/all', () => {
+
+    it('It should have status code 200 and return all resources from SWAPI', done => {
+        supertest(app)
+            .get('/swapi/all')
+            .set('Accept', 'application/json')
+            .expect(200)
+            .end((err, res) => {
+                if (err) done(err)
+                console.log(res.body)
+                done()
+            })
+    })
+})
+
 /*
 describe("SWAPI Tests", () => {
 
@@ -91,7 +106,6 @@ describe("SWAPI Tests", () => {
         })
     })    
 })
-*/
 
 //Film Tests
 //======================================
@@ -215,6 +229,7 @@ describe("Film DB Tests: ", () => {
         })
     })
 })
+
 
 //People Tests
 //======================================
@@ -848,3 +863,5 @@ describe('Vehicles DB Tests: ', () => {
         })
     })
 })
+
+*/

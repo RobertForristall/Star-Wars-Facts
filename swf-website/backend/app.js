@@ -23,6 +23,7 @@ const planetsRouter = require('./routes/planets')
 const speciesRouter = require('./routes/species')
 const starshipsRouter = require('./routes/starships')
 const vehiclesRouter = require('./routes/vehicles')
+const swapiRouter = require('./routes/swapi')
 
 app.use('/users', usersRouter)
 app.use('/films', filmsRouter)
@@ -31,6 +32,7 @@ app.use('/planets', planetsRouter)
 app.use('/species', speciesRouter)
 app.use('/starships', starshipsRouter)
 app.use('/vehicles', vehiclesRouter)
+app.use('/swapi', swapiRouter)
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`)
