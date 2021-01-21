@@ -1,0 +1,21 @@
+.search-bar {
+    display: block;
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    float: right;
+    top: 0;
+    left: 200px
+}
+
+.search-bar label {
+    color: white;
+    margin-left: 30px;
+}
+
+.search-bar input {
+    margin-top: 10px;
+    font-size: 20px;
+    width: 40%;
+}

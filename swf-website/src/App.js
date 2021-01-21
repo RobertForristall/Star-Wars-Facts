@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom'
 import Home from './components/Home.component'
 import Navbar from './components/Navbar.component'
+import Search from './components/Search.component'
 
 export default class App extends Component{
   constructor(props){
@@ -19,6 +20,7 @@ export default class App extends Component{
     return(
       <Router>
         <Navbar/>
+        <Search/>
         <Route path='/' exact render = {() => <Home/>}/>
       </Router>
 
