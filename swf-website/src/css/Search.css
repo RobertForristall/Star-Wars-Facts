@@ -1,6 +1,6 @@
 .search-bar {
     display: block;
-    background-color: black;
+    background-color: rgb(238, 238, 238);
     height: 50px;
     width: 100%;
     position: fixed;
@@ -18,4 +18,31 @@
     margin-top: 10px;
     font-size: 20px;
     width: 40%;
+}
+
+.deactivated-btn {
+    background-color:rgb(238, 238, 238);
+    color: black;
+    border: 1px;
+    border-top-color: none;
+    border-left: lightblue;
+    border-right: lightblue;
+    border-bottom: lightgray;
+}
+
+.activated-btn {
+    background-color: lightgray;
+    color: black;
+    border: 10px solid;
+    border-top-color: lightgray;
+    border-left: lightblue;
+    border-right: lightblue;
+    border-bottom: lightgray;
+    margin-right: 20px;
+    margin-left: 5px;
+    padding-bottom: 20px;
+}
+
+.margin-btn {
+    margin-top: 50px;
 }

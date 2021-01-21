@@ -121,7 +121,7 @@ export default class Navbar extends React.Component {
         return(
             <div className = 'sidenav'>
                 <div className = 'MainImage'>
-                    <img src = {image} alt = "Death Star" width = '200' height = '200'/>
+                    <img src = {image} alt = "Death Star" width = '150' height = '150'/>
                 </div>
                 <h3 className = 'WhiteColor'>Main Links:</h3>
                 <ul>

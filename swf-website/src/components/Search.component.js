@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import '../css/Search.css'
 
 export default class Search extends React.Component {
@@ -10,7 +11,8 @@ export default class Search extends React.Component {
         this.input = React.createRef()
 
         this.state = {
-            searchString: ""
+            searchString: "",
+            buttonSelected: 0
         }
 
     }
@@ -25,11 +27,15 @@ export default class Search extends React.Component {
     }
 
     render() {
+
+        let page_class, form_topic_class
+
+        if (this.state.buttonSelected == 0) page_class = 'activated-btn'
+        else page_class = 'deactivated-btn'
+
         return(
             <div className = 'search-bar'>
-                <label>Search:
-                <input type = 'text' ref = {this.input} onKeyUp = {this.handleSearch}/>
-                </label>
+                <input type = 'text' placeholder='Search' ref = {this.input} onKeyUp = {this.handleSearch}/>
             </div>
         )
     }
